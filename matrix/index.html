@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>THE MATRIX</title>
+    <meta name="Author" content="Darian Steyn" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="imgs/MatrixIcon.ico" type="image/ico" rel="icon">
+</head>
+
+<body>
+
+    <main class="container">
+        <canvas id="c"></canvas>
+        <section id="home" class="page home">
+            <div class="header txt-center">
+                <img src="imgs/TheMatrixHeading.png">
+
+                <input type="text" placeholder="ENTER YOUR NAME" id="name" class="name txt-center">
+                <a href="#" id="startButton" class="button button-default button-small padding-sm align-middle">NEXT</a>
+            </div>
+        </section>
+
+        <section id="two" class="page two">
+
+            <span class="element"></span><span class="typed-cursor"></span>
+
+            <div class="button-container  align-middle">
+                <a href="#" class="button button-default button-small padding-sm align-middle float-left prevButton">PREVIOUS</a>
+                <a href="#" class="button button-default button-small padding-sm align-middle float-right nextButton">NEXT</a>
+            </div>
+        </section>
+
+        <section id="three" class="page three">
+
+            <span class="element2"></span><span class="typed-cursor"></span>
+
+            <div class="button-container  align-middle">
+                <a href="#" class="button button-default button-small padding-sm align-middle float-left prevButton">PREVIOUS</a>
+                <a href="#" class="button button-default button-small padding-sm align-middle float-right nextButton">NEXT</a>
+            </div>
+        </section>
+        <section id="four" class="page four">
+
+            <video class="video1 align-middle" id="video1" width="600" height="450" controls="controls">
+                <source src="imgs/The%20Matrix%20White%20Rabbit%20Scene%20HD.mp4"> Your browser does not support the video tag.
+            </video>
+
+            <div class="button-container  align-middle">
+                <a href="#" class="button2 button-default button-small padding-sm align-middle float-left prevButton">PREVIOUS</a>
+                <a href="https://movies.sterkinekor.co.za/browsing/" target="_blank" class="button2 button-default button-small padding-sm align-middle float-right">FOLLOW?</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/matrix.js"></script>
+
+</body>
+
+</html>

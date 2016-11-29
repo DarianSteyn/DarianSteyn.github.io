@@ -1,2 +1,2 @@
 # dariansteyn.github.io
-My personal portfolio using a github host.
+My portfolio website hosted on a Github link.

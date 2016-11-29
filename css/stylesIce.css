@@ -1,0 +1,594 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/background.png);
+    height: 100%;
+}
+
+
+/*FONTS*/
+
+@font-face {
+    font-family: Gotham;
+    src: url(../fonts/gothamLight.ttf);
+}
+
+@font-face {
+    font-family: Bebas;
+    src: url(../fonts/bebas.ttf);
+}
+
+
+/*LOADING SCREEN*/
+
+.loadContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.se-pre-con {
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: -webkit-linear-gradient(left, #f4f4f2, #d6d7d6);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #f4f4f2, #d6d7d6);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #f4f4f2, #d6d7d6);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #f4f4f2, #d6d7d6);
+}
+
+.se-pre-con img {
+    position: relative;
+    top: 23%;
+    opacity: 0.7;
+    display: table;
+    margin: 0 auto;
+    animation: rotateIn 3.7s infinite;
+}
+
+.se-pre-con p {
+    position: relative;
+    top: 23%;
+    color: #464646;
+    font-family: Gotham, sans-serif;
+    font-size: 1.3em;
+    display: table;
+    margin: 0 auto;
+    animation: blink 3.5s infinite;
+}
+
+
+/*This only works with the "animation" attribute AND the "animation-name" inside the styling for whatever you would like it to effect*/
+
+@keyframes rotateIn {
+    from {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+    to {
+        transform-origin: center;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.rotateIn {
+    animation-name: rotateIn;
+}
+
+
+/*HEADER*/
+
+header {
+    z-index: 5;
+    position: fixed;
+    height: 80px;
+    background-color: #1E3147;
+}
+
+header img {
+    position: relative;
+    left: 2%;
+    top: 15px;
+}
+
+
+/*NAVIGATION*/
+
+#vertical-menu {
+    z-index: 5;
+    position: fixed;
+    top: 30px;
+    height: auto;
+    border-left: solid 1.5px #1E3147;
+}
+
+#vertical-menu li {
+    list-style-type: none;
+}
+
+.active li {
+    padding-top: 20px;
+}
+
+#vertical-menu li a {
+    padding: 3%;
+    font-family: Gotham, sans-serif;
+    color: #1E3147;
+    text-decoration: none;
+}
+
+.active h3 {
+    display: table;
+    margin: 0 auto;
+    color: white;
+    font-family: Gotham, sans-serif;
+    font-size: 1.3em;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.active h3:hover {
+    color: #cbcbcb;
+}
+
+#vertical-menu ul ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 27px;
+    display: table;
+    margin: 0 auto;
+    padding: 0 15px;
+    /*transition for smooth hover animation*/
+    transition: all 0.15s;
+}
+
+#vertical-menu ul ul {
+    display: none;
+}
+
+#vertical-menu li.active ul {
+    background-color: #1E3147;
+    display: block;
+}
+
+.page-navigation .current a {
+    color: white;
+}
+
+
+/* Link Effect 1: Brackets */
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+    color: white;
+}
+
+.cl-effect-1 a::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+    color: white;
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.site-navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+/* END OF - Link Effect 1: Brackets */
+
+
+/*CONTENT*/
+
+
+/*Info of projects*/
+
+img {
+    max-width: 100%;
+}
+
+.heading {
+    color: #0491FF;
+    font-family: Gotham, sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.projectDes {
+    color: #0491FF;
+    font-family: Gotham, sans-serif;
+    font-size: 1.4em;
+    float: left;
+}
+
+.year {
+    color: #0491FF;
+    font-family: Gotham, sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    float: right;
+}
+
+.summaryHeader {
+    position: relative;
+    top: 70px;
+    color: #0491FF;
+    font-family: Gotham, sans-serif;
+    font-size: 1.6em;
+    font-weight: 800;
+    display: table;
+    margin: 0 auto;
+    float: none;
+}
+
+.summary {
+    position: relative;
+    padding: 3%;
+    top: 100px;
+    color: #0491FF;
+    font-family: Gotham, sans-serif;
+    line-height: 27px;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.browserMock {
+    height: 1200px;
+    position: relative;
+    top: 130px;
+    margin: 0 auto;
+    float: none;
+    opacity: 1;
+}
+
+.browserMock>img:nth-child(1) {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    z-index: 3;
+}
+
+.browserMock>img:nth-child(2) {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    bottom: 5%;
+    width: 75%;
+    z-index: 2;
+}
+
+.browserMock>img:nth-child(3) {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    bottom: 13%;
+    width: 75%;
+    z-index: 1;
+}
+
+.macMock {
+    position: relative;
+    top: 30px;
+    display: table;
+    margin: 0 auto;
+    float: none;
+    width: 1200px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.9s ease-in-out;
+}
+
+.macMock img {
+    position: relative;
+    left: 20%;
+    width: 20%;
+    float: left;
+}
+
+div.macMock.is-showing {
+    opacity: 1;
+    transform: translateY(0px)
+}
+
+
+/*Parallax*/
+
+
+/*Project description*/
+
+div.iceInfo {
+    position: relative;
+    padding: 3%;
+    top: 3.5%;
+    display: table;
+    margin: 0 auto;
+    float: none;
+}
+
+.iceInfo hr {
+    background-color: #0491FF;
+    height: 3px;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.iceHeader {
+    overflow: hidden;
+    position: relative;
+    height: 650px;
+    background-image: url(../img/projects/icebreak/icebreakBackground.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+.iceEffect {
+    height: 500px;
+    width: 80%;
+    background-image: url(../img/projects/icebreak/iceBirds.png);
+    background-size: 45%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.2;
+    left: 10%;
+}
+
+.iceType {
+    width: 292px;
+    height: 291px;
+    background-image: url(../img/projects/icebreak/IceType.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20%;
+    background-position: center;
+}
+
+
+/*COLUMN SETUP*/
+
+.fix {
+    clear: both;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.col-1 {
+    width: 8.33%
+}
+
+.col-2 {
+    width: 16.66%
+}
+
+.col-3 {
+    width: 25%
+}
+
+.col-4 {
+    width: 33.33%
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class *=col-] {
+    float: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 860px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    header {
+        z-index: 4;
+        position: fixed;
+        height: 40px;
+        background-color: #1E3147;
+    }
+    header img {
+        width: 30%;
+        position: relative;
+        left: 2%;
+        top: 12px;
+    }
+    .active h3 {
+        float: right;
+        color: white;
+        font-family: Gotham, sans-serif;
+        font-size: 1.3em;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    #vertical-menu {
+        z-index: 5;
+        position: fixed;
+        width: 20%;
+        top: 9px;
+        height: auto;
+        border-left: solid 1.5px #1E3147;
+    }
+    .active h3 {
+        font-size: 0;
+    }
+    .plus {
+        font-size: 30px;
+        position: absolute;
+        right: 30px;
+    }
+    #vertical-menu li.active ul {
+        background-color: none;
+    }
+    .iceType {
+        background-size: 20%;
+        top: 7%;
+        height: 180px;
+    }
+    div.iceInfo {
+        position: relative;
+        top: 1.5%;
+        display: table;
+        margin: 0 auto;
+        float: none;
+    }
+    .iceHeader {
+        height: 200px;
+    }
+    .heading {
+        font-size: 2.5em;
+        padding: 1%;
+    }
+    .projectDes {
+        font-size: 1em;
+        padding: 1%;
+    }
+    .year {
+        font-size: 1em;
+        padding: 1%;
+    }
+    .summary {
+        padding: 2%;
+    }
+    .browserMock {
+        height: 500px;
+        top: 0;
+    }
+    .browserMock>img:nth-child(1) {
+        padding-top: 50px;
+        width: 60%;
+        position: relative;
+        top: 70px;
+    }
+    .browserMock>img:nth-child(2) {
+        width: 60%;
+        bottom: 0;
+    }
+    .browserMock>img:nth-child(3) {
+        width: 60%;
+        bottom: 13%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    .year {
+        float: left;
+    }
+    .browserMock {
+        height: 500px;
+        top: 0;
+    }
+    .browserMock>img:nth-child(1) {
+        width: 60%;
+        position: relative;
+        top: 120px;
+    }
+    .browserMock>img:nth-child(2) {
+        width: 60%;
+        bottom: -70px;
+    }
+    .browserMock>img:nth-child(3) {
+        width: 60%;
+        bottom: -10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    .year {
+        float: left;
+    }
+}

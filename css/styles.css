@@ -1,0 +1,1094 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*FONTS*/
+
+@font-face {
+    font-family: Gotham;
+    src: url(../fonts/gothamLight.ttf);
+}
+
+
+/*LOADING SCREEN*/
+
+.loadContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.se-pre-con {
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: -webkit-linear-gradient(left, #f4f4f2, #d6d7d6);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #f4f4f2, #d6d7d6);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #f4f4f2, #d6d7d6);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #f4f4f2, #d6d7d6);
+}
+
+.se-pre-con img {
+    position: relative;
+    top: 23%;
+    opacity: 0.7;
+    display: table;
+    margin: 0 auto;
+    animation: rotateIn 3.7s infinite;
+}
+
+.se-pre-con p {
+    position: relative;
+    top: 23%;
+    color: #464646;
+    font-family: Gotham, sans-serif;
+    font-size: 1.3em;
+    display: table;
+    margin: 0 auto;
+    animation: blink 3.5s infinite;
+}
+
+
+/*This only works with the "animation" attribute AND the "animation-name" inside the styling for whatever you would like it to effect*/
+
+@keyframes rotateIn {
+    from {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+    to {
+        transform-origin: center;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.rotateIn {
+    animation-name: rotateIn;
+}
+
+
+/*HEADER*/
+
+header {
+    z-index: 4;
+    position: fixed;
+    height: 80px;
+    background-color: #1E3147;
+}
+
+header img {
+    position: relative;
+    left: 2%;
+    top: 15px;
+}
+
+.webDeveloper {
+    background-image: url(../img/webDeveloper.jpg);
+    z-index: -3;
+    height: 100%;
+}
+
+
+/*NAVIGATION*/
+
+#vertical-menu {
+    z-index: 5;
+    position: fixed;
+    top: 30px;
+    height: auto;
+}
+
+#vertical-menu li {
+    list-style-type: none;
+}
+
+.active li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#vertical-menu li a {
+    padding: 3%;
+    font-family: Gotham, sans-serif;
+    color: #1E3147;
+    text-decoration: none;
+}
+
+.active h3 {
+    display: table;
+    margin: 0 auto;
+    color: white;
+    font-family: Gotham, sans-serif;
+    font-size: 1.3em;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.active h3:hover {
+    color: #cbcbcb;
+}
+
+#vertical-menu ul ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 27px;
+    display: table;
+    margin: 0 auto;
+    padding: 0 15px;
+    /*transition for smooth hover animation*/
+    transition: all 0.15s;
+}
+
+#vertical-menu ul ul {
+    display: none;
+}
+
+#vertical-menu li.active ul {
+    background-color: #1E3147;
+    display: block;
+}
+
+.page-navigation .current a {
+    color: white;
+}
+
+
+/* Link Effect 1: Brackets */
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+    color: white;
+}
+
+.cl-effect-1 a::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+    color: white;
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.site-navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+/* END OF - Link Effect 1: Brackets */
+
+
+/*CONTENT*/
+
+.content {
+    background-image: url(../img/background.png);
+    height: 100%;
+}
+
+
+/*INTRO*/
+
+.typed-cursor {
+    display: none;
+}
+
+.intro {
+    height: 900px;
+}
+
+.hello {
+    background-image: url(../img/webDeveloper.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    height: 100%;
+    opacity: 1;
+}
+
+.hello p {
+    position: relative;
+    top: 200px;
+    font-family: Gotham, sans-serif;
+    font-size: 52px;
+    color: white;
+    display: table;
+    margin: 0 auto;
+}
+
+.element {
+    position: relative;
+    top: 250px;
+    font-family: Gotham, sans-serif;
+    font-size: 38px;
+    color: white;
+    display: table;
+    margin: 0 auto;
+}
+
+.with p {
+    position: relative;
+    top: 290px;
+    font-family: Gotham, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    display: table;
+    margin: 0 auto;
+}
+
+
+/*INTRO SYMBOL ANIMATIONS*/
+
+.scrollDown {
+    height: 90px;
+    width: 80px;
+    padding: 40px;
+    background-image: url(../img/symbol.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 400px;
+    left: 46.4%;
+    transition: 0.5s ease-in;
+}
+
+.scrollDown:hover {
+    background-image: url(../img/symbol2.png);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*PROJECTS*/
+
+.projects {
+    display: inline-block;
+}
+
+.p1 {
+    opacity: 0;
+    position: relative;
+    top: 100px;
+    display: table;
+    margin: 0 auto;
+    width: 350px;
+    height: 280px;
+}
+
+.p1 img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.b1 {
+    height: 384px;
+}
+
+
+/*PROJECTS - INFO BARS*/
+
+.box {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    top: 220px;
+    color: black;
+    background: linear-gradient( rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, #1E3147 50%, #1E3147);
+    background-size: 100% 202%;
+    transition: all 0.5s ease;
+    animation: down-bump 0.4s ease;
+    z-index: 1;
+}
+
+.box>p {
+    opacity: 0;
+    padding: 25px;
+    font-family: Gotham;
+    color: white;
+    float: right;
+    transition: all 0.8s ease;
+}
+
+
+/*PROJECTS - INFO BARS - HOVER STATES*/
+
+.p1:hover .box {
+    background-position: 100% 100%;
+}
+
+.p1:hover .box p {
+    opacity: 1;
+}
+
+.box:hover p {
+    opacity: 1;
+}
+
+.view {
+    font-family: Gotham, sans-serif;
+    font-weight: 200;
+    color: white;
+    position: relative;
+    top: 25px;
+    display: table;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-image: url(../img/viewIcon2.png);
+    background-position: left;
+    padding-left: 30px;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.view:hover {
+    background-image: url(../img/viewIcon1.png);
+}
+
+.p1:hover .view {
+    opacity: 1;
+}
+
+.box:hover .view {
+    opacity: 1;
+}
+
+.box p {
+    float: right;
+}
+
+.box:hover {
+    background-position: 100% 100%;
+}
+
+
+/*SECTION 3 - Skills*/
+
+.about {
+    display: inline-block;
+    height: 1000px;
+}
+
+#skills {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    float: none;
+}
+
+.skills {
+    position: relative;
+    top: 80px;
+}
+
+.skills img {
+    float: left;
+    position: relative;
+    top: 7px;
+    left: 13px;
+}
+
+.about p:first-child {
+    position: relative;
+    top: 70px;
+    display: table;
+    margin: 0 auto;
+    color: #1E3147;
+    font-size: 2.6em;
+    font-family: Gotham, sans-serif;
+    opacity: 1;
+}
+
+#skills p {
+    position: relative;
+    margin: 6% 2% 0 2%;
+    text-align: justify;
+    top: 200px;
+    color: #1E3147;
+    font-size: 1.5em;
+    font-family: Gotham, sans-serif;
+    line-height: 150%;
+}
+
+#skills hr {
+    position: absolute;
+    top: 132%;
+    width: 450px;
+    color: #1E3147;
+    width: 100%
+}
+
+.s1 {
+    position: relative;
+    top: 30%;
+    height: 100px;
+}
+
+.s1 p {
+    position: relative;
+    left: 3.4%;
+    top: 5%;
+    color: #1E3147;
+    font-size: 1.5em;
+    font-family: Gotham, sans-serif;
+    opacity: 1;
+    float: left;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.skillbar {
+    position: relative;
+    top: 120px;
+    display: block;
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.skillbar {
+    position: relative;
+    top: 120px;
+    display: block;
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.skillbar-title {
+    z-index: 2;
+    padding-left: 30px;
+    position: relative;
+    top: 40px;
+    font-family: Gotham, sans-serif;
+    font-size: 13px;
+    color: white;
+}
+
+.skillbar-bar1 {
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    margin-top: 15px;
+    height: 35px;
+    width: 90%;
+    background: #1E3147;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    float: left;
+}
+
+.skillbar-bar2 {
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    margin-top: 15px;
+    height: 35px;
+    width: 65%;
+    background: #1E3147;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    float: left;
+}
+
+.skillbar-bar3 {
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    margin-top: 15px;
+    height: 35px;
+    width: 80%;
+    background: #1E3147;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    float: left;
+}
+
+.skillbar-bar4 {
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    margin-top: 15px;
+    height: 35px;
+    width: 65%;
+    background: #1E3147;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    float: left;
+}
+
+.skillbar-bar5 {
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    margin-top: 15px;
+    height: 35px;
+    width: 80%;
+    background: #1E3147;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    float: left;
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    font-family: Gotham, sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+    height: 35px;
+    line-height: 35px;
+    color: #444;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+/*SECTION 3 - Contact*/
+
+.social-popout {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 30px;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.social-popout img {
+    border-radius: 50%;
+    margin: 8px;
+    width: 100%;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.social-popout img:hover {
+    margin: 0px;
+    box-shadow: 4px 4px 3px 3px rgba(126, 122, 122, 0.3);
+}
+
+.contact {
+    display: inline-block;
+    height: 550px;
+}
+
+.contact>p:first-child {
+    position: relative;
+    top: 90px;
+    display: table;
+    margin: 0 auto;
+    color: #1E3147;
+    font-size: 2.6em;
+    font-family: Gotham, sans-serif;
+    opacity: 1;
+}
+
+.socialLinks {
+    position: relative;
+    top: 90px;
+}
+
+.socialLinks span {
+    float: none;
+    display: table;
+    margin: 0 auto;
+}
+
+#bugPop {
+    position: relative;
+    bottom: 190px;
+    float: right;
+    width: 300px;
+    height: 80px;
+    background-color: #1E3147;
+    border-radius: 2px;
+}
+
+#bugPop a {
+    text-decoration: none;
+}
+
+#bugPop p {
+    padding: 5.4%;
+    color: white;
+    line-height: 17px;
+    font-size: 0.9em;
+    font-family: Gotham, sans-serif;
+    opacity: 1;
+}
+
+
+/*COLUMN SETUP*/
+
+.fix {
+    clear: both;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.col-1 {
+    width: 8.33%
+}
+
+.col-2 {
+    width: 16.66%
+}
+
+.col-3 {
+    width: 25%
+}
+
+.col-4 {
+    width: 33.33%
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class *=col-] {
+    float: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*----- Menu -----*/
+
+.menu ul {
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.menu li {
+    margin: 20px 40px 0px 0px;
+    float: left;
+    list-style: none;
+    font-size: 17px;
+}
+
+.menu li {
+    margin: 20px 40px 0px 0px;
+    float: left;
+    list-style: none;
+    font-size: 17px;
+}
+
+.menu li:last-child {
+    margin-right: 0px;
+}
+
+.menu a {
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: color linear 0.15s;
+    text-decoration: none;
+}
+
+.menu li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px white;
+    transform: scaleX(0.0000);
+    transition: transform 250ms ease-in-out;
+}
+
+.menu li:hover:after {
+    transform: scaleX(1);
+}
+
+.menu a:hover,
+.menu .current-item a {
+    text-decoration: none;
+    color: #C09046;
+}
+
+
+/*----- Responsive -----*/
+
+
+/*Max width is - if the device screen is less than or equal to the pixels specified*/
+
+@media screen and (max-width: 860px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    header {
+        z-index: 4;
+        position: fixed;
+        height: 60px;
+        background-color: #1E3147;
+    }
+    header img {
+        width: 40%;
+        position: relative;
+        left: 2%;
+        top: 15px;
+    }
+    .active h3 {
+        float: right;
+        color: white;
+        font-family: Gotham, sans-serif;
+        font-size: 1.3em;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    #vertical-menu {
+        z-index: 5;
+        position: fixed;
+        width: 20%;
+        top: 20px;
+        height: auto;
+    }
+    .element {
+        position: relative;
+        top: 200px;
+        font-family: Gotham, sans-serif;
+        font-size: 38px;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        display: table;
+        margin: 0 auto;
+    }
+    .with p {
+        position: relative;
+        top: 240px;
+        font-family: Gotham, sans-serif;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        display: table;
+        margin: 0 auto;
+        padding: 2%;
+    }
+    #skills p {
+        position: relative;
+        margin: 6% 2% 0 2%;
+        text-align: justify;
+        top: 200px;
+        color: #1E3147;
+        font-size: 1.3em;
+        font-family: Gotham, sans-serif;
+        line-height: 150%;
+        padding: 4%;
+    }
+    #skills hr {
+        position: absolute;
+        top: 130%;
+        width: 450px;
+        color: #1E3147;
+        width: 100%
+    }
+    .p1 {
+        width: 300px;
+    }
+    .active h3 {
+        font-size: 0;
+    }
+    .plus {
+        font-size: 30px;
+        position: absolute;
+        right: 30px;
+    }
+    #bugPop {
+        position: relative;
+        top: 20px;
+        float: right;
+        width: 300px;
+        height: 80px;
+        background-color: #1E3147;
+        border-radius: 2px;
+    }
+    .skill-bar-percent {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .skillbar-bar1 {
+	width: 85%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    header {
+        z-index: 4;
+        position: fixed;
+        height: 60px;
+        background-color: #1E3147;
+    }
+    header img {
+        width: 70%;
+        position: relative;
+        left: 2%;
+        top: 15px;
+    }
+    .active h3 {
+        float: right;
+        color: white;
+        font-family: Gotham, sans-serif;
+        font-size: 1.3em;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    #vertical-menu {
+        z-index: 5;
+        position: fixed;
+        right: 50px;
+        top: 20px;
+        height: auto;
+    }
+    .element {
+        position: relative;
+        top: 200px;
+        font-family: Gotham, sans-serif;
+        font-size: 38px;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        display: table;
+        margin: 0 auto;
+    }
+    .with p {
+        position: relative;
+        top: 240px;
+        font-family: Gotham, sans-serif;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        display: table;
+        margin: 0 auto;
+        padding: 2%;
+    }
+    #skills p {
+        position: relative;
+        margin: 6% 2% 0 2%;
+        text-align: justify;
+        top: 200px;
+        color: #1E3147;
+        font-size: 1.3em;
+        font-family: Gotham, sans-serif;
+        line-height: 150%;
+        padding: 4%;
+    }
+    #skills hr {
+        position: absolute;
+        top: 130%;
+        width: 450px;
+        color: #1E3147;
+        width: 100%
+    }
+    .p1 {
+        width: 100%;
+    }
+    #vertical-menu li.active ul {
+        position: relative;
+        background-color: #1E3147;
+        display: block;
+        top: 30px;
+        left: 50px;
+    }
+    #vertical-menu ul ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 11px;
+        line-height: 5px;
+        display: table;
+        margin: 0 auto;
+        padding: 0 15px;
+        /*transition for smooth hover animation*/
+        transition: all 0.15s;
+    }
+    .active h3 {
+        font-size: 0;
+    }
+    .plus {
+        font-size: 30px;
+        position: absolute;
+        right: -30px;
+    }
+    .cl-effect-1 a::before {
+        margin-right: 0px;
+    }
+    .contact>p:first-child {
+        top: 210px;
+    }
+    .socialLinks {
+        top: 210px;
+    }
+    #skills hr {
+        display: none;
+    }
+    .skill-bar-percent {
+        right: 0;
+    }
+    .cl-effect-1 a::before,
+    .cl-effect-1 a::after {
+        display: none;
+    }
+    
+    .skillbar-bar1 {
+	width: 82%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    .p1 {
+        width: 100%;
+    }
+    .active h3 {
+        font-size: 0;
+    }
+    .plus {
+        font-size: 30px;
+        position: absolute;
+        right: -30px;
+    }
+    .cl-effect-1 a::before,
+    .cl-effect-1 a::after {
+        display: none;
+    }
+    
+    .skillbar-bar1 {
+	width: 78%;
+    }
+    
+    .skillbar-bar3 {
+	width: 75%;
+    }
+    
+    .skillbar-bar5 {
+	width: 75%;
+    }
+}
