@@ -140,7 +140,7 @@ $(window).scroll(function() {
     }
 });
 
-//TYPED.JS & MY JS
+//Typing Script
 
 ! function ($) {
 
@@ -266,15 +266,6 @@ $(window).scroll(function() {
             var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
             var self = this;
 
-            // ------------- optional ------------- //
-            // backpaces a certain string faster
-            // ------------------------------------ //
-            // if (self.arrayPos == 1){
-            //  self.backDelay = 50;
-            // }
-            // else{ self.backDelay = 500; }
-
-            // contain typing function in a timeout humanize'd delay
             self.timeout = setTimeout(function () {
                 // check for an escape character before a pause value
                 // format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
@@ -379,25 +370,10 @@ $(window).scroll(function() {
                 return;
             }
 
-            // varying values for setTimeout during typing
-            // can't be global since number changes each time loop is executed
             var humanize = Math.round(Math.random() * (100 - 30)) + this.backSpeed;
             var self = this;
 
             self.timeout = setTimeout(function () {
-
-                // ----- this part is optional ----- //
-                // check string array position
-                // on the first string, only delete one word
-                // the stopNum actually represents the amount of chars to
-                // keep in the current string. In my case it's 14.
-                // if (self.arrayPos == 1){
-                //  self.stopNum = 14;
-                // }
-                //every other time, delete the whole typed string
-                // else{
-                //  self.stopNum = 0;
-                // }
 
                 if (self.contentType === 'html') {
                     // skip over html tags while backspacing
@@ -415,7 +391,6 @@ $(window).scroll(function() {
                     }
                 }
 
-                // ----- continue important stuff ----- //
                 // replace text with base text + typed characters
                 var nextString = curString.substr(0, curStrPos);
                 if (self.attr) {
@@ -430,7 +405,6 @@ $(window).scroll(function() {
                     }
                 }
 
-                // if the number (id of character in current string) is
                 // less than the stop number, keep going
                 if (curStrPos > self.stopNum) {
                     // subtract characters one by one
@@ -438,7 +412,6 @@ $(window).scroll(function() {
                     // loop the function
                     self.backspace(curString, curStrPos);
                 }
-                // if the stop number has been reached, increase
                 // array position to next string
                 else if (curStrPos <= self.stopNum) {
                     self.arrayPos++;
@@ -458,11 +431,6 @@ $(window).scroll(function() {
             }, humanize);
 
         },
-        /**
-         * Shuffles the numbers in the given array.
-         * @param {Array} array
-         * @returns {Array}
-         */
         shuffleArray: function (array) {
             var tmp, current, top = array.length;
             if (top)
@@ -474,24 +442,6 @@ $(window).scroll(function() {
                 }
             return array;
         },
-
-        // Start & Stop currently not working
-
-        // , stop: function() {
-        //     var self = this;
-
-        //     self.stop = true;
-        //     clearInterval(self.timeout);
-        // }
-
-        // , start: function() {
-        //     var self = this;
-        //     if(self.stop === false)
-        //        return;
-
-        //     this.stop = false;
-        //     this.init();
-        // }
 
         // Reset and rebuild the element
         reset: function () {
