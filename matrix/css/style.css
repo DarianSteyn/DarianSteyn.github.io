@@ -333,3 +333,83 @@ a {
     margin: 0 auto;
     max-width: 900px;
 }
+
+.oops {
+	display: none;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 860px) {
+    .oops {
+        display: inline-block;
+	width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-image: url(../../img/background.png);
+    height: 100%;
+    }
+    
+    .oops h2 {
+    margin: 0 auto;
+    display: table;
+    padding: 7%;
+    font-family: Gotham, sans-serif;
+	color: #1E3147;
+    z-index: 3;
+    }
+    
+    .oops p {
+    margin: 0 auto;
+    display: table;
+    padding: 3%;
+	font-family: Gotham, sans-serif;
+	color: #1E3147;
+    z-index: 3;
+    text-align: center;
+    }
+    
+    .oops img{
+	display: table;
+    margin: 0 auto;
+    padding: 5%;
+}
+    
+}
+
+@media screen and (max-width: 400px) {
+    .oops {
+        display: inline-block;
+	width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-image: url(../../img/background.png);
+    height: 100%;
+    }
+    
+    .oops h2 {
+    margin: 0 auto;
+    display: table;
+    padding: 7%;
+    font-family: Gotham, sans-serif;
+	color: #1E3147;
+    z-index: 3;
+    }
+    
+    .oops p {
+    margin: 0 auto;
+    display: table;
+    padding: 5%;
+	font-family: Gotham, sans-serif;
+	color: #1E3147;
+    z-index: 3;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+}
+
