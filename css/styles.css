@@ -659,7 +659,7 @@ header img {
 
 .contact {
     display: inline-block;
-    height: 550px;
+    height: 600px;
 }
 
 .contact>p:first-child {
@@ -1040,10 +1040,10 @@ header img {
         margin-right: 0px;
     }
     .contact>p:first-child {
-        top: 210px;
+        top: 300px;
     }
     .socialLinks {
-        top: 200px;
+        top: 300px;
         height: 200px;
     }
     #skills hr {
