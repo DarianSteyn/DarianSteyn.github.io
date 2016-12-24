@@ -699,12 +699,13 @@ header img {
 }
 
 #bugPop p {
-    padding: 5.4%;
+    padding: 7%;
     color: white;
     line-height: 17px;
     font-size: 0.9em;
     font-family: Gotham, sans-serif;
     opacity: 1;
+    text-align: center;
 }
 
 
@@ -916,13 +917,13 @@ header img {
         right: 30px;
     }
     #bugPop {
-        position: relative;
-        top: 20px;
-        float: right;
-        width: 300px;
-        height: 80px;
-        background-color: #1E3147;
-        border-radius: 2px;
+    position: relative;
+    bottom: 190px;
+    float: right;
+    width: 100px;
+    height: 200px;
+    background-color: #1E3147;
+    border-radius: 2px;
     }
     .skill-bar-percent {
         right: 0;
@@ -1042,7 +1043,8 @@ header img {
         top: 210px;
     }
     .socialLinks {
-        top: 210px;
+        top: 200px;
+        height: 200px;
     }
     #skills hr {
         display: none;
