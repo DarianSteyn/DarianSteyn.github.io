@@ -500,6 +500,15 @@ div.bmwInfo {
     .summary {
         padding: 2%;
     }
+    .cl-effect-1 a::before,
+    .cl-effect-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+    color: white;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -509,6 +518,15 @@ div.bmwInfo {
     .year {
         float: left;
     }
+    .cl-effect-1 a::before,
+    .cl-effect-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+    color: white;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -517,5 +535,14 @@ div.bmwInfo {
     }
     .year {
         float: left;
+    }
+    .cl-effect-1 a::before,
+    .cl-effect-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+    color: white;
     }
 }
